@@ -1,5 +1,5 @@
 
-package tp4_obligatorio;
+package entidades;
 
 public class Materia {
     int idMateria;
