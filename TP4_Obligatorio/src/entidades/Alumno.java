@@ -67,4 +67,10 @@ public class Alumno {
         return materias.size();
     }
 
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", legajo=" + legajo + ", materias=" + materias + '}';
+    }
+    
+
 }

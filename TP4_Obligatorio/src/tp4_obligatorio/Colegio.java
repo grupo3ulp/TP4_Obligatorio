@@ -1,19 +1,28 @@
 package tp4_obligatorio;
 
+import GUI.GuiMain;
 import entidades.Alumno;
 import entidades.Materia;
+import java.util.Collections;
+import java.util.HashSet;
 
+
+//Agregar limite de caracteres al legajo
 public class Colegio {
+    private static HashSet<Alumno>alumnos=new HashSet<>();
 
+    public static HashSet<Alumno> getAlumnos() {
+        return alumnos;
+    }
+    
     public static void main(String[] args) {
-
         Materia m1 = new Materia(101, "Inglés 1", 1);
         Materia m2 = new Materia(102, "Matemática", 1);
         Materia m3 = new Materia(103, "Laboratorio 1", 1);
 
         Alumno n1 = new Alumno("Martín", "Lopez", 1001);
         Alumno n2 = new Alumno("Brenda", "Martinez", 1002);
-
+        Collections.addAll(alumnos, n1,n2);
         n1.agregarMateria(m1);
         n1.agregarMateria(m2);
         n1.agregarMateria(m3);
@@ -29,6 +38,13 @@ public class Colegio {
         System.out.println(n1.cantidadMaterias());
         System.out.println(n2.cantidadMaterias());
 
+        GuiMain main=new GuiMain();
+        main.setVisible(true);
+        main.setLocationRelativeTo(null);
+        
+        
+        
     }
+   
 
 }
