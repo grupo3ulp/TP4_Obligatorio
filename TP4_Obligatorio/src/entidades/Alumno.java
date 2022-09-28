@@ -56,7 +56,7 @@ public class Alumno {
     public void setMaterias(ArrayList<Materia> materias) {
         this.materias = materias;
     }
-    
+
     //Se le pasa una materia por parámetro y se agrega al ArrayList
     public void agregarMateria(Materia m) {
         materias.add(m);
@@ -69,8 +69,10 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", legajo=" + legajo + ", materias=" + materias + '}';
+        return "Nombre: " + nombre + "\n"
+                + "Apellido: " + apellido + "\n"
+                + "Legajo: " + legajo + "\n"
+                + "Materias: " + materias + "\n";
     }
-    
 
 }

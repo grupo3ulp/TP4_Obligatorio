@@ -1,7 +1,7 @@
-
 package entidades;
 
 public class Materia {
+
     int idMateria;
     String nombre;
     int anio;
@@ -35,6 +35,10 @@ public class Materia {
     public void setAnio(int anio) {
         this.anio = anio;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + " | Año: " + anio + " | ID: " + idMateria + "\n";
+    }
+
 }

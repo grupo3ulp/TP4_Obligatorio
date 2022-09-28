@@ -27,10 +27,8 @@
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="btnMostrarAl" max="32767" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="btnSalir" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnMostrarMat" alignment="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="btnSalir" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnMostrarMat" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnInscribir" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnAgregarMat" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnAgregarAl" alignment="0" max="32767" attributes="0"/>
@@ -108,11 +106,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar Materia"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarMatActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnInscribir">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inscribir Alumno"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInscribirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnMostrarAl">
       <Properties>
@@ -126,6 +130,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar Materias"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarMatActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalir">
       <Properties>

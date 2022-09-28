@@ -4,6 +4,8 @@
  */
 package GUI;
 
+import entidades.Alumno;
+import entidades.Materia;
 import javax.swing.JOptionPane;
 import tp4_obligatorio.Colegio;
 
@@ -54,8 +56,18 @@ public class GuiMain extends javax.swing.JFrame {
         });
 
         btnAgregarMat.setText("Agregar Materia");
+        btnAgregarMat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarMatActionPerformed(evt);
+            }
+        });
 
         btnInscribir.setText("Inscribir Alumno");
+        btnInscribir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInscribirActionPerformed(evt);
+            }
+        });
 
         btnMostrarAl.setText("Mostrar Alumnos");
         btnMostrarAl.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +77,11 @@ public class GuiMain extends javax.swing.JFrame {
         });
 
         btnMostrarMat.setText("Mostrar Materias");
+        btnMostrarMat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarMatActionPerformed(evt);
+            }
+        });
 
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -93,9 +110,8 @@ public class GuiMain extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnMostrarAl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnMostrarMat, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnMostrarMat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnInscribir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgregarMat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgregarAl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -165,8 +181,35 @@ public class GuiMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnMostrarAlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarAlActionPerformed
-        Colegio.getAlumnos().forEach(System.out::println);
+        String aux2 = " ";
+        for (Alumno aux : Colegio.getAlumnos()) {
+            aux2 += aux + "\n" + "------------------------" + "\n";
+        }
+        txtResultado.setText(aux2);
+
     }//GEN-LAST:event_btnMostrarAlActionPerformed
+
+    private void btnAgregarMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMatActionPerformed
+        GUIAgregarMateria agregarMat = new GUIAgregarMateria();
+        agregarMat.setVisible(true);
+        agregarMat.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_btnAgregarMatActionPerformed
+
+    private void btnMostrarMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarMatActionPerformed
+        String aux2 = " ";
+        for (Materia aux : Colegio.getMaterias()) {
+            aux2 += aux + "\n" + "------------------------" + "\n";
+        }
+        txtResultado.setText(aux2);
+    }//GEN-LAST:event_btnMostrarMatActionPerformed
+
+    private void btnInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInscribirActionPerformed
+        GuiInscribirAlumno inscribir = new GuiInscribirAlumno();
+        inscribir.setVisible(true);
+        inscribir.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_btnInscribirActionPerformed
 
     /**
      * @param args the command line arguments

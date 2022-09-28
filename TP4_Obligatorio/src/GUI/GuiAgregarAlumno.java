@@ -14,10 +14,9 @@ import tp4_obligatorio.Colegio;
  */
 public class GuiAgregarAlumno extends javax.swing.JFrame {
 
-   
     public GuiAgregarAlumno() {
         initComponents();
-        setResizable(false); 
+        setResizable(false);
         btnGuardar.setEnabled(false);
     }
 
@@ -29,6 +28,7 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
             btnGuardar.setEnabled(false);
         }
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -173,24 +173,24 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLegajoActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-  
-       int aux=JOptionPane.showConfirmDialog(rootPane, "Esta seguro que desea guardar este alumno");
-        if (aux==0) {
+
+        int aux = JOptionPane.showConfirmDialog(rootPane, "Esta seguro que desea guardar este alumno");
+        if (aux == 0) {
             Colegio.getAlumnos().add(new Alumno(txtNombre.getText(), txtApellido.getText(),
-                Integer.parseInt(txtLegajo.getText())));
+                    Integer.parseInt(txtLegajo.getText())));
             JOptionPane.showMessageDialog(rootPane, "Alumno guardado correctamente");
             txtApellido.setText("");
             txtLegajo.setText("");
             txtNombre.setText("");
             btnGuardar.setEnabled(false);
-        }else if(aux==1){
-        txtApellido.setText("");
+        } else if (aux == 1) {
+            txtApellido.setText("");
             txtLegajo.setText("");
             txtNombre.setText("");
-             btnGuardar.setEnabled(false);
+            btnGuardar.setEnabled(false);
         }
-        
-        
+
+
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -212,22 +212,19 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
 
     private void txtLegajoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLegajoKeyTyped
         Character c = evt.getKeyChar();
-        if (!Character.isDigit(c)&&!c.equals('\b')&&!c.equals('\t')&&!c.equals('\n')) {
+        if (!Character.isDigit(c) && !c.equals('\b') && !c.equals('\t') && !c.equals('\n')) {
             evt.consume();
             JOptionPane.showMessageDialog(null, "Solo se pueden ingresar numeros en "
                     + "este campo");
-            
+
         }
-        if (txtLegajo.getText().length()>5) {
+        if (txtLegajo.getText().length() > 5) {
             evt.consume();
         }
-        
-        
-
     }//GEN-LAST:event_txtLegajoKeyTyped
 
     private void txtNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyReleased
-         habilitarBoton();
+        habilitarBoton();
     }//GEN-LAST:event_txtNombreKeyReleased
 
     private void txtApellidoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyReleased

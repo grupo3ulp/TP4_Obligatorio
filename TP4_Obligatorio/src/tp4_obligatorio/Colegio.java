@@ -10,7 +10,13 @@ import java.util.HashSet;
 //Agregar limite de caracteres al legajo
 public class Colegio {
     private static HashSet<Alumno>alumnos=new HashSet<>();
+    private static HashSet<Materia> materias = new HashSet();
 
+    public static HashSet<Materia> getMaterias() {
+        return materias;
+    }
+    
+    
     public static HashSet<Alumno> getAlumnos() {
         return alumnos;
     }
@@ -23,6 +29,7 @@ public class Colegio {
         Alumno n1 = new Alumno("Martín", "Lopez", 1001);
         Alumno n2 = new Alumno("Brenda", "Martinez", 1002);
         Collections.addAll(alumnos, n1,n2);
+        Collections.addAll(materias, m1,m2,m3);
         n1.agregarMateria(m1);
         n1.agregarMateria(m2);
         n1.agregarMateria(m3);
