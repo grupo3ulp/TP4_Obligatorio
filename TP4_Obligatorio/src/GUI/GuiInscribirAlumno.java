@@ -26,12 +26,12 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
         initComponents();
                        
         for (Alumno alumno : Colegio.getAlumnos()) {
-            String alu = alumno.getNombre() + " "+ alumno.getApellido() + "- Legajo: "+alumno.getLegajo();
-            jBoxAlumno.addItem(alu);
+            //String alu = alumno.getNombre() + " "+ alumno.getApellido() + "- Legajo: "+alumno.getLegajo();
+            jBoxAlumno.addItem(alumno);
         }
         
         for (Materia materia : Colegio.getMaterias()) {
-            jBoxMateria.addItem(materia.toString());
+            jBoxMateria.addItem(materia);
         }
     }
 
@@ -150,13 +150,17 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVolverActionPerformed
 
     private void jBtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGuardarActionPerformed
-        int aux = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea inscribir a ");
+        int aux = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea guardar los cambios?");
         if (aux == 0) {
-
+            for (Alumno alumno : Colegio.getAlumnos()) {
+                if (jBoxAlumno.getSelectedItem() == alumno) {
+                    alumno.getMaterias().add((Materia)jBoxMateria.getSelectedItem());
+                }
+            }
             JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente");
             jBtnGuardar.setEnabled(false);
         } else if (aux == 1) {
-            jBtnGuardar.setEnabled(false);
+            jBtnGuardar.setEnabled(true);
         }    }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     private void jBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxMateriaActionPerformed
@@ -168,8 +172,8 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jBoxAlumno;
-    private javax.swing.JComboBox<String> jBoxMateria;
+    private javax.swing.JComboBox<Object> jBoxAlumno;
+    private javax.swing.JComboBox<Object> jBoxMateria;
     private javax.swing.JButton jBtnGuardar;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JLabel jLAlumno;
