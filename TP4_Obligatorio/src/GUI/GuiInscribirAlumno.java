@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import entidades.Alumno;
+import entidades.Materia;
 import java.util.Arrays;
 import static java.util.Collections.list;
 import javax.swing.JComboBox;
@@ -22,6 +24,15 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
      */
     public GuiInscribirAlumno() {
         initComponents();
+                       
+        for (Alumno alumno : Colegio.getAlumnos()) {
+            String alu = alumno.getNombre() + " "+ alumno.getApellido() + "- Legajo: "+alumno.getLegajo();
+            jBoxAlumno.addItem(alu);
+        }
+        
+        for (Materia materia : Colegio.getMaterias()) {
+            jBoxMateria.addItem(materia.toString());
+        }
     }
 
     /**
@@ -53,14 +64,12 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
         jLMateria.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLMateria.setText("Materia");
 
-        jBoxMateria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jBoxMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBoxMateriaActionPerformed(evt);
             }
         });
 
-        jBoxAlumno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jBoxAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBoxAlumnoActionPerformed(evt);
