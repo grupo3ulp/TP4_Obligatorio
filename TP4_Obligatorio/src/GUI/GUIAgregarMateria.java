@@ -20,7 +20,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
      */
     public GUIAgregarMateria() {
         initComponents();
-         setResizable(false);
+        setResizable(false);
     }
 
     /**
@@ -171,8 +171,18 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
 
         int aux = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea guardar esta materia?");
         if (aux == 0) {
-            Colegio.getMaterias().add(new Materia(Integer.parseInt(jtxtId.getText()), jtxtNombre.getText(), Integer.parseInt(jtxtAnio.getText())));
-            JOptionPane.showMessageDialog(rootPane, "Materia guaradada correctamente");
+            boolean flag = true;
+            for (Materia materia : Colegio.getMaterias()) {
+                if (materia.getIdMateria() == Integer.parseInt(jtxtId.getText())) {
+                    flag = false;
+                }
+            }
+            if (!flag) {
+                JOptionPane.showMessageDialog(rootPane, "El Id de la materia ya está en uso.");
+            } else{
+                Colegio.getMaterias().add(new Materia(Integer.parseInt(jtxtId.getText()), jtxtNombre.getText(), Integer.parseInt(jtxtAnio.getText())));
+                JOptionPane.showMessageDialog(rootPane, "Materia guaradada correctamente");
+            }
             jtxtId.setText("");
             jtxtAnio.setText("");
             jtxtNombre.setText("");
@@ -216,7 +226,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_jtxtAnioActionPerformed
 
     private void jtxtAnioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtAnioKeyTyped
-                Character c = evt.getKeyChar();
+        Character c = evt.getKeyChar();
         if (!Character.isDigit(c) && !c.equals('\b') && !c.equals('\t') && !c.equals('\n')) {
             evt.consume();
             JOptionPane.showMessageDialog(null, "Solo se pueden ingresar numeros en "
