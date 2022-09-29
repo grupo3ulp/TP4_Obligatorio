@@ -7,9 +7,6 @@ package GUI;
 
 import entidades.Alumno;
 import entidades.Materia;
-import java.util.Arrays;
-import static java.util.Collections.list;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import tp4_obligatorio.Colegio;
 
@@ -140,7 +137,7 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBoxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxAlumnoActionPerformed
-        //?????????
+        
     }//GEN-LAST:event_jBoxAlumnoActionPerformed
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
@@ -155,11 +152,13 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
         if (aux == 0) {
             for (Alumno alumno : Colegio.getAlumnos()) {
                 if (jBoxAlumno.getSelectedItem() == alumno) {
-                    alumno.agregarMateria((Materia)jBoxMateria.getSelectedItem());
+                     if (alumno.agregarMateria((Materia) jBoxMateria.getSelectedItem())) {
+                        JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente.");
+                    } else {
+                        JOptionPane.showMessageDialog(rootPane, "El alumno ya está inscripto en esta materia.");
+                    }
                 }
-            }
-            JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente");
-            
+            }            
         } else if (aux == 1) {
             
         }    }//GEN-LAST:event_jBtnGuardarActionPerformed

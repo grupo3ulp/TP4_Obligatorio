@@ -1,6 +1,5 @@
 package entidades;
 
-
 import java.util.HashSet;
 
 public class Alumno {
@@ -51,9 +50,17 @@ public class Alumno {
         this.materias = materias;
     }
 
-    //Se le pasa una materia por parámetro y se agrega al ArrayList
-    public void agregarMateria(Materia m) {
+    //Se le pasa una materia por parámetro y se agrega al HashSet
+    public boolean agregarMateria(Materia m) {
+        boolean done = false;
+        int size1 = materias.size();
         materias.add(m);
+        int size2 = materias.size();
+
+        if (size2 > size1) {
+            done = true;
+        }
+        return done;
     }
 
     //Devuelve la cantidad de materias en la que está inscripto el alumno
@@ -65,9 +72,9 @@ public class Alumno {
     public String toString() {
         return nombre + " " + apellido;
     }
-    
+
     public String mostrarAlumno() {
-        return  "Nombre: " + nombre + "\n"
+        return "Nombre: " + nombre + "\n"
                 + "Apellido: " + apellido + "\n"
                 + "Legajo: " + legajo + "\n"
                 + "Materias: " + materias + "\n";
