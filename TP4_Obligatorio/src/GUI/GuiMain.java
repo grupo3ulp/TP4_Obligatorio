@@ -183,7 +183,7 @@ public class GuiMain extends javax.swing.JFrame {
     private void btnMostrarAlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarAlActionPerformed
         String aux2 = " ";
         for (Alumno aux : Colegio.getAlumnos()) {
-            aux2 += aux.mostrarAlumno();
+            aux2 += aux + "\n" + "------------------------" + "\n";
         }
         txtResultado.setText(aux2);
 
