@@ -63,7 +63,11 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + "\n"
+        return nombre + " " + apellido;
+    }
+    
+    public String mostrarAlumno() {
+        return  "Nombre: " + nombre + "\n"
                 + "Apellido: " + apellido + "\n"
                 + "Legajo: " + legajo + "\n"
                 + "Materias: " + materias + "\n";
