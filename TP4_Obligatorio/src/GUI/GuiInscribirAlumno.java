@@ -159,9 +159,9 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
                 }
             }
             JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente");
-            jBtnGuardar.setEnabled(false);
+            
         } else if (aux == 1) {
-            jBtnGuardar.setEnabled(false);
+            
         }    }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     private void jBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxMateriaActionPerformed
