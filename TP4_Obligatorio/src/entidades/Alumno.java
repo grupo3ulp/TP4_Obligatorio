@@ -60,17 +60,17 @@ public class Alumno {
     public int cantidadMaterias() {
         return materias.size();
     }
+    
+    public String mostrarAlumno() {
+        return nombre + " " + apellido + "\n"
+                + "Legajo: " + legajo + "\n"
+                + materias + "\n"
+                + "_____________" + "\n";
+    }
 
     @Override
     public String toString() {
         return nombre + " " + apellido;
-    }
-    
-    public String mostrarAlumno() {
-        return  "Nombre: " + nombre + "\n"
-                + "Apellido: " + apellido + "\n"
-                + "Legajo: " + legajo + "\n"
-                + "Materias: " + materias + "\n";
-    }
+    }    
 
 }
