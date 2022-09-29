@@ -24,13 +24,13 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
      */
     public GuiInscribirAlumno() {
         initComponents();
-         setResizable(false);
-                       
+        setResizable(false);
+
         for (Alumno alumno : Colegio.getAlumnos()) {
-            
+
             jBoxAlumno.addItem(alumno);
         }
-        
+
         for (Materia materia : Colegio.getMaterias()) {
             jBoxMateria.addItem(materia);
         }
@@ -155,13 +155,16 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
         if (aux == 0) {
             for (Alumno alumno : Colegio.getAlumnos()) {
                 if (jBoxAlumno.getSelectedItem() == alumno) {
-                    alumno.agregarMateria((Materia)jBoxMateria.getSelectedItem());
+                    if (alumno.agregarMateria((Materia) jBoxMateria.getSelectedItem())) {
+                        JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente.");
+                    } else {
+                        JOptionPane.showMessageDialog(rootPane, "El alumno ya está inscripto en esta materia.");
+                    }
                 }
             }
-            JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente");
-            
+
         } else if (aux == 1) {
-            
+
         }    }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     private void jBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxMateriaActionPerformed
