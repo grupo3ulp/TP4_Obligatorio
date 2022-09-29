@@ -1,25 +1,19 @@
 package entidades;
 
-import java.util.ArrayList;
+
+import java.util.HashSet;
 
 public class Alumno {
 
     private String nombre;
     private String apellido;
     private int legajo;
-    private ArrayList<Materia> materias = new ArrayList();
+    private HashSet<Materia> materias = new HashSet();
 
     public Alumno(String nombre, String apellido, int legajo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
-    }
-
-    public Alumno(String nombre, String apellido, int legajo, ArrayList materias) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.legajo = legajo;
-        this.materias = materias;
     }
 
     public Alumno() {
@@ -49,11 +43,11 @@ public class Alumno {
         this.legajo = legajo;
     }
 
-    public ArrayList<Materia> getMaterias() {
+    public HashSet<Materia> getMaterias() {
         return materias;
     }
 
-    public void setMaterias(ArrayList<Materia> materias) {
+    public void setMaterias(HashSet<Materia> materias) {
         this.materias = materias;
     }
 

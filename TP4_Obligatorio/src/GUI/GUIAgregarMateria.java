@@ -20,6 +20,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
      */
     public GUIAgregarMateria() {
         initComponents();
+         setResizable(false);
     }
 
     /**

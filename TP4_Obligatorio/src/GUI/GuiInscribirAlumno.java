@@ -24,9 +24,10 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
      */
     public GuiInscribirAlumno() {
         initComponents();
+         setResizable(false);
                        
         for (Alumno alumno : Colegio.getAlumnos()) {
-            //String alu = alumno.getNombre() + " "+ alumno.getApellido() + "- Legajo: "+alumno.getLegajo();
+            
             jBoxAlumno.addItem(alumno);
         }
         
@@ -154,17 +155,17 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
         if (aux == 0) {
             for (Alumno alumno : Colegio.getAlumnos()) {
                 if (jBoxAlumno.getSelectedItem() == alumno) {
-                    alumno.getMaterias().add((Materia)jBoxMateria.getSelectedItem());
+                    alumno.agregarMateria((Materia)jBoxMateria.getSelectedItem());
                 }
             }
             JOptionPane.showMessageDialog(rootPane, "Inscripción realizada correctamente");
             jBtnGuardar.setEnabled(false);
         } else if (aux == 1) {
-            jBtnGuardar.setEnabled(true);
+            jBtnGuardar.setEnabled(false);
         }    }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     private void jBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBoxMateriaActionPerformed
-        // ????????????
+
     }//GEN-LAST:event_jBoxMateriaActionPerformed
 
     /**
