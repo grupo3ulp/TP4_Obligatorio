@@ -40,7 +40,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jtxtAnio = new javax.swing.JTextField();
         jtxtId = new javax.swing.JTextField();
         jBtnGuardar = new javax.swing.JButton();
-        jBtnSalir = new javax.swing.JButton();
+        jBtnVolver = new javax.swing.JButton();
         jBtnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,10 +86,10 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
             }
         });
 
-        jBtnSalir.setText("Salir");
-        jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
+        jBtnVolver.setText("Volver");
+        jBtnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnSalirActionPerformed(evt);
+                jBtnVolverActionPerformed(evt);
             }
         });
 
@@ -132,7 +132,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBtnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
-                .addComponent(jBtnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBtnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
         );
         layout.setVerticalGroup(
@@ -155,7 +155,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnGuardar)
-                    .addComponent(jBtnSalir)
+                    .addComponent(jBtnVolver)
                     .addComponent(jBtnLimpiar))
                 .addGap(40, 40, 40))
         );
@@ -185,12 +185,12 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBtnGuardarActionPerformed
 
-    private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
+    private void jBtnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVolverActionPerformed
         GuiMain main = new GuiMain();
         main.setVisible(true);
         main.setLocationRelativeTo(null);
         dispose();
-    }//GEN-LAST:event_jBtnSalirActionPerformed
+    }//GEN-LAST:event_jBtnVolverActionPerformed
 
     private void jBtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimpiarActionPerformed
         jtxtId.setText("");
@@ -232,7 +232,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnGuardar;
     private javax.swing.JButton jBtnLimpiar;
-    private javax.swing.JButton jBtnSalir;
+    private javax.swing.JButton jBtnVolver;
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLTitulo;
     private javax.swing.JLabel jLanio;

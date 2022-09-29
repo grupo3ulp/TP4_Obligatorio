@@ -59,7 +59,7 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jBtnLimpiar" min="-2" pref="94" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-              <Component id="jBtnSalir" min="-2" pref="94" max="-2" attributes="0"/>
+              <Component id="jBtnVolver" min="-2" pref="94" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -87,7 +87,7 @@
               <EmptySpace pref="65" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBtnSalir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnVolver" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBtnLimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -150,12 +150,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnGuardarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnSalir">
+    <Component class="javax.swing.JButton" name="jBtnVolver">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Salir"/>
+        <Property name="text" type="java.lang.String" value="Volver"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnSalirActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVolverActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnLimpiar">
