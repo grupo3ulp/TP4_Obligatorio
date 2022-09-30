@@ -37,51 +37,35 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLTitulo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLid = new javax.swing.JLabel();
-        jLNombre = new javax.swing.JLabel();
-        jLanio = new javax.swing.JLabel();
-        jtxtNombre = new javax.swing.JTextField();
-        jtxtAnio = new javax.swing.JTextField();
         jtxtId = new javax.swing.JTextField();
-        jBtnGuardar = new javax.swing.JButton();
+        jLNombre = new javax.swing.JLabel();
+        jtxtNombre = new javax.swing.JTextField();
+        jLanio = new javax.swing.JLabel();
+        jtxtAnio = new javax.swing.JTextField();
         jBtnVolver = new javax.swing.JButton();
         jBtnLimpiar = new javax.swing.JButton();
+        jBtnGuardar = new javax.swing.JButton();
+        sidePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLTitulo.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLTitulo.setText("Agregar Materia");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLid.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLid.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLid.setForeground(new java.awt.Color(51, 51, 51));
         jLid.setText("ID");
+        jPanel1.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
-        jLNombre.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLNombre.setText("Nombre");
-
-        jLanio.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLanio.setText("Año");
-
-        jtxtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jtxtNombreKeyReleased(evt);
-            }
-        });
-
-        jtxtAnio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtAnioActionPerformed(evt);
-            }
-        });
-        jtxtAnio.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jtxtAnioKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtxtAnioKeyTyped(evt);
-            }
-        });
-
+        jtxtId.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtId.setBorder(null);
         jtxtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtIdActionPerformed(evt);
@@ -95,86 +79,112 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
                 jtxtIdKeyTyped(evt);
             }
         });
+        jPanel1.add(jtxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 318, 30));
 
-        jBtnGuardar.setText("Guardar");
-        jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnGuardarActionPerformed(evt);
+        jLNombre.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLNombre.setForeground(new java.awt.Color(51, 51, 51));
+        jLNombre.setText("Nombre");
+        jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
+
+        jtxtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtNombre.setBorder(null);
+        jtxtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtxtNombreKeyReleased(evt);
             }
         });
+        jPanel1.add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 318, 30));
 
+        jLanio.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLanio.setForeground(new java.awt.Color(51, 51, 51));
+        jLanio.setText("Año");
+        jPanel1.add(jLanio, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
+
+        jtxtAnio.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtAnio.setBorder(null);
+        jtxtAnio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtAnioActionPerformed(evt);
+            }
+        });
+        jtxtAnio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtxtAnioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtAnioKeyTyped(evt);
+            }
+        });
+        jPanel1.add(jtxtAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 318, 30));
+
+        jBtnVolver.setBackground(new java.awt.Color(53, 44, 91));
+        jBtnVolver.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jBtnVolver.setForeground(new java.awt.Color(255, 255, 255));
         jBtnVolver.setText("Volver");
+        jBtnVolver.setBorder(null);
         jBtnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnVolverActionPerformed(evt);
             }
         });
+        jPanel1.add(jBtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 94, 30));
 
+        jBtnLimpiar.setBackground(new java.awt.Color(53, 44, 91));
+        jBtnLimpiar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jBtnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         jBtnLimpiar.setText("Limpiar");
+        jBtnLimpiar.setBorder(null);
         jBtnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnLimpiarActionPerformed(evt);
             }
         });
+        jPanel1.add(jBtnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 94, 30));
+
+        jBtnGuardar.setBackground(new java.awt.Color(53, 44, 91));
+        jBtnGuardar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jBtnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnGuardar.setText("Guardar");
+        jBtnGuardar.setBorder(null);
+        jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBtnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 94, 30));
+
+        sidePanel.setBackground(new java.awt.Color(53, 44, 91));
+        sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Agregar Materia");
+        sidePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        sidePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 180, 10));
+
+        jPanel1.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 440));
+
+        jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 320, 20));
+
+        jSeparator3.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 320, 20));
+
+        jSeparator4.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 320, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLTitulo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLanio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jtxtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLNombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                                .addComponent(jtxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLid)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jtxtId, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(13, 13, 13)))
-                .addGap(21, 21, 21))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jBtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBtnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(jBtnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLid)
-                    .addComponent(jtxtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLNombre)
-                    .addComponent(jtxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLanio)
-                    .addComponent(jtxtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnGuardar)
-                    .addComponent(jBtnVolver)
-                    .addComponent(jBtnLimpiar))
-                .addGap(40, 40, 40))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -273,11 +283,17 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
     private javax.swing.JButton jBtnLimpiar;
     private javax.swing.JButton jBtnVolver;
     private javax.swing.JLabel jLNombre;
-    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLanio;
     private javax.swing.JLabel jLid;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField jtxtAnio;
     private javax.swing.JTextField jtxtId;
     private javax.swing.JTextField jtxtNombre;
+    private javax.swing.JPanel sidePanel;
     // End of variables declaration//GEN-END:variables
 }

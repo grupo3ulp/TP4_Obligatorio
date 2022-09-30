@@ -33,43 +33,38 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLTitulo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jlLegajo = new javax.swing.JLabel();
-        jLNombre = new javax.swing.JLabel();
-        jLApellido = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        txtApellido = new javax.swing.JTextField();
         txtLegajo = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
+        txtNombre = new javax.swing.JTextField();
+        jLNombre = new javax.swing.JLabel();
+        txtApellido = new javax.swing.JTextField();
+        jLApellido = new javax.swing.JLabel();
         btnVolver = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        sidePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(596, 443));
+        setResizable(false);
+        setSize(new java.awt.Dimension(596, 443));
 
-        jLTitulo.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLTitulo.setText("Agregar Alumno");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlLegajo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlLegajo.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jlLegajo.setForeground(new java.awt.Color(51, 51, 51));
         jlLegajo.setText("Legajo");
+        jPanel1.add(jlLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
-        jLNombre.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLNombre.setText("Nombre");
-
-        jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLApellido.setText("Apellido");
-
-        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNombreKeyReleased(evt);
-            }
-        });
-
-        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtApellidoKeyReleased(evt);
-            }
-        });
-
+        txtLegajo.setBackground(new java.awt.Color(255, 255, 255));
+        txtLegajo.setBorder(null);
         txtLegajo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLegajoActionPerformed(evt);
@@ -83,86 +78,104 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
                 txtLegajoKeyTyped(evt);
             }
         });
+        jPanel1.add(txtLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 310, 30));
 
-        btnGuardar.setText("Guardar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombre.setBorder(null);
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNombreKeyReleased(evt);
             }
         });
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 310, 30));
 
+        jLNombre.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLNombre.setForeground(new java.awt.Color(51, 51, 51));
+        jLNombre.setText("Nombre");
+        jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
+
+        txtApellido.setBackground(new java.awt.Color(255, 255, 255));
+        txtApellido.setBorder(null);
+        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtApellidoKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 310, 30));
+
+        jLApellido.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLApellido.setForeground(new java.awt.Color(51, 51, 51));
+        jLApellido.setText("Apellido");
+        jPanel1.add(jLApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
+
+        btnVolver.setBackground(new java.awt.Color(53, 44, 91));
+        btnVolver.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver.setText("Volver");
+        btnVolver.setBorder(null);
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverActionPerformed(evt);
             }
         });
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 90, 30));
 
+        btnLimpiar.setBackground(new java.awt.Color(53, 44, 91));
+        btnLimpiar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.setBorder(null);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 90, 30));
+
+        btnGuardar.setBackground(new java.awt.Color(53, 44, 91));
+        btnGuardar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setText("Guardar");
+        btnGuardar.setBorder(null);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 90, 30));
+
+        sidePanel.setBackground(new java.awt.Color(53, 44, 91));
+        sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Agregar Alumno");
+        sidePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        sidePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 180, 10));
+
+        jPanel1.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 440));
+
+        jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 280, -1));
+
+        jSeparator3.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 280, 20));
+
+        jSeparator4.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 280, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlLegajo)
-                        .addGap(92, 92, 92)
-                        .addComponent(txtLegajo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLNombre)
-                        .addGap(74, 74, 74)
-                        .addComponent(txtNombre))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLApellido)
-                        .addGap(74, 74, 74)
-                        .addComponent(txtApellido)))
-                .addGap(124, 124, 124))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
-                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105)
-                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlLegajo)
-                            .addComponent(txtLegajo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLNombre))
-                        .addGap(79, 79, 79))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLApellido)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -237,8 +250,14 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
     private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLApellido;
     private javax.swing.JLabel jLNombre;
-    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel jlLegajo;
+    private javax.swing.JPanel sidePanel;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtLegajo;
     private javax.swing.JTextField txtNombre;

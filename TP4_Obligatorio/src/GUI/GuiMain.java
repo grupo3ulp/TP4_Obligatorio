@@ -6,7 +6,9 @@ package GUI;
 
 import entidades.Alumno;
 import entidades.Materia;
+import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import tp4_obligatorio.Colegio;
 
 /**
@@ -32,199 +34,411 @@ public class GuiMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLTitulo = new javax.swing.JLabel();
-        btnAgregarAl = new javax.swing.JButton();
-        btnAgregarMat = new javax.swing.JButton();
-        btnInscribir = new javax.swing.JButton();
-        btnMostrarAl = new javax.swing.JButton();
-        btnMostrarMat = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
+        BG = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtResultado = new javax.swing.JTextArea();
         jButton4 = new javax.swing.JButton();
+        sidePanel = new javax.swing.JPanel();
+        btn_AgregarAlumno = new javax.swing.JPanel();
+        jLMenu = new javax.swing.JLabel();
+        JLIconMenu = new javax.swing.JLabel();
+        btn_AgregarMateria = new javax.swing.JPanel();
+        jLMenu2 = new javax.swing.JLabel();
+        JLIconMenu2 = new javax.swing.JLabel();
+        btn_InscribirAlumno = new javax.swing.JPanel();
+        jLMenu3 = new javax.swing.JLabel();
+        JLIconMenu3 = new javax.swing.JLabel();
+        btn_MostrarMaterias = new javax.swing.JPanel();
+        jLMostrarMaterias = new javax.swing.JLabel();
+        JLIconMenu4 = new javax.swing.JLabel();
+        btn_MostrarAlumnos = new javax.swing.JPanel();
+        jLMenu4 = new javax.swing.JLabel();
+        JLIconMenu5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setResizable(false);
+        setSize(new java.awt.Dimension(596, 443));
 
-        jLTitulo.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLTitulo.setText("Colegio Hogwarts");
-
-        btnAgregarAl.setText("Agregar Alumno");
-        btnAgregarAl.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarAlActionPerformed(evt);
-            }
-        });
-
-        btnAgregarMat.setText("Agregar Materia");
-        btnAgregarMat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarMatActionPerformed(evt);
-            }
-        });
-
-        btnInscribir.setText("Inscribir Alumno");
-        btnInscribir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInscribirActionPerformed(evt);
-            }
-        });
-
-        btnMostrarAl.setText("Mostrar Alumnos");
-        btnMostrarAl.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMostrarAlActionPerformed(evt);
-            }
-        });
-
-        btnMostrarMat.setText("Mostrar Materias");
-        btnMostrarMat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMostrarMatActionPerformed(evt);
-            }
-        });
-
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
+        BG.setBackground(new java.awt.Color(255, 255, 255));
+        BG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtResultado.setEditable(false);
+        txtResultado.setBackground(new java.awt.Color(204, 204, 204));
         txtResultado.setColumns(20);
         txtResultado.setRows(5);
         jScrollPane1.setViewportView(txtResultado);
 
-        jButton4.setText("Limpiar");
+        BG.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 270, 300));
+
+        jButton4.setBackground(new java.awt.Color(53, 44, 91));
+        jButton4.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("LIMPIAR");
+        jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        BG.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 110, 30));
+
+        sidePanel.setBackground(new java.awt.Color(53, 44, 91));
+        sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btn_AgregarAlumno.setBackground(new java.awt.Color(88, 55, 118));
+        btn_AgregarAlumno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_AgregarAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_AgregarAlumnoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_AgregarAlumnoMouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_AgregarAlumnoMousePressed(evt);
+            }
+        });
+
+        jLMenu.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jLMenu.setText("Agregar Alumno");
+        jLMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        JLIconMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-escritora-mujer-20.png"))); // NOI18N
+
+        javax.swing.GroupLayout btn_AgregarAlumnoLayout = new javax.swing.GroupLayout(btn_AgregarAlumno);
+        btn_AgregarAlumno.setLayout(btn_AgregarAlumnoLayout);
+        btn_AgregarAlumnoLayout.setHorizontalGroup(
+            btn_AgregarAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_AgregarAlumnoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(JLIconMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLMenu)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        btn_AgregarAlumnoLayout.setVerticalGroup(
+            btn_AgregarAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_AgregarAlumnoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(btn_AgregarAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLMenu)
+                    .addComponent(JLIconMenu))
+                .addGap(20, 20, 20))
+        );
+
+        sidePanel.add(btn_AgregarAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 220, 60));
+
+        btn_AgregarMateria.setBackground(new java.awt.Color(88, 55, 118));
+        btn_AgregarMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_AgregarMateria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_AgregarMateriaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_AgregarMateriaMouseEntered(evt);
+            }
+        });
+
+        jLMenu2.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLMenu2.setForeground(new java.awt.Color(255, 255, 255));
+        jLMenu2.setText("Agregar Materia");
+        jLMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        JLIconMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-group-layouts-20.png"))); // NOI18N
+
+        javax.swing.GroupLayout btn_AgregarMateriaLayout = new javax.swing.GroupLayout(btn_AgregarMateria);
+        btn_AgregarMateria.setLayout(btn_AgregarMateriaLayout);
+        btn_AgregarMateriaLayout.setHorizontalGroup(
+            btn_AgregarMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_AgregarMateriaLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(JLIconMenu2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLMenu2)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        btn_AgregarMateriaLayout.setVerticalGroup(
+            btn_AgregarMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_AgregarMateriaLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(btn_AgregarMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLMenu2)
+                    .addComponent(JLIconMenu2))
+                .addGap(20, 20, 20))
+        );
+
+        sidePanel.add(btn_AgregarMateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 60));
+
+        btn_InscribirAlumno.setBackground(new java.awt.Color(88, 55, 118));
+        btn_InscribirAlumno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_InscribirAlumno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_InscribirAlumnoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_InscribirAlumnoMouseEntered(evt);
+            }
+        });
+
+        jLMenu3.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jLMenu3.setText("Inscribir Alumno");
+        jLMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        JLIconMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-web-20.png"))); // NOI18N
+
+        javax.swing.GroupLayout btn_InscribirAlumnoLayout = new javax.swing.GroupLayout(btn_InscribirAlumno);
+        btn_InscribirAlumno.setLayout(btn_InscribirAlumnoLayout);
+        btn_InscribirAlumnoLayout.setHorizontalGroup(
+            btn_InscribirAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_InscribirAlumnoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(JLIconMenu3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLMenu3)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        btn_InscribirAlumnoLayout.setVerticalGroup(
+            btn_InscribirAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_InscribirAlumnoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(btn_InscribirAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLMenu3)
+                    .addComponent(JLIconMenu3))
+                .addGap(20, 20, 20))
+        );
+
+        sidePanel.add(btn_InscribirAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 220, 60));
+
+        btn_MostrarMaterias.setBackground(new java.awt.Color(88, 55, 118));
+        btn_MostrarMaterias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_MostrarMaterias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_MostrarMateriasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_MostrarMateriasMouseEntered(evt);
+            }
+        });
+
+        jLMostrarMaterias.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLMostrarMaterias.setForeground(new java.awt.Color(255, 255, 255));
+        jLMostrarMaterias.setText("Mostrar Materias");
+        jLMostrarMaterias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        JLIconMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-storytelling-20.png"))); // NOI18N
+
+        javax.swing.GroupLayout btn_MostrarMateriasLayout = new javax.swing.GroupLayout(btn_MostrarMaterias);
+        btn_MostrarMaterias.setLayout(btn_MostrarMateriasLayout);
+        btn_MostrarMateriasLayout.setHorizontalGroup(
+            btn_MostrarMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_MostrarMateriasLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(JLIconMenu4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLMostrarMaterias)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+        btn_MostrarMateriasLayout.setVerticalGroup(
+            btn_MostrarMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_MostrarMateriasLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(btn_MostrarMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLMostrarMaterias)
+                    .addComponent(JLIconMenu4))
+                .addGap(20, 20, 20))
+        );
+
+        sidePanel.add(btn_MostrarMaterias, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 220, 60));
+
+        btn_MostrarAlumnos.setBackground(new java.awt.Color(88, 55, 118));
+        btn_MostrarAlumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_MostrarAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_MostrarAlumnosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_MostrarAlumnosMouseEntered(evt);
+            }
+        });
+
+        jLMenu4.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        jLMenu4.setForeground(new java.awt.Color(255, 255, 255));
+        jLMenu4.setText("Mostrar Alumnos");
+        jLMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        JLIconMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-colegial-en-un-escritorio-20.png"))); // NOI18N
+
+        javax.swing.GroupLayout btn_MostrarAlumnosLayout = new javax.swing.GroupLayout(btn_MostrarAlumnos);
+        btn_MostrarAlumnos.setLayout(btn_MostrarAlumnosLayout);
+        btn_MostrarAlumnosLayout.setHorizontalGroup(
+            btn_MostrarAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_MostrarAlumnosLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(JLIconMenu5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLMenu4)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        btn_MostrarAlumnosLayout.setVerticalGroup(
+            btn_MostrarAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_MostrarAlumnosLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(btn_MostrarAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLMenu4)
+                    .addComponent(JLIconMenu5))
+                .addGap(20, 20, 20))
+        );
+
+        sidePanel.add(btn_MostrarAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 220, 60));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Menú Principal");
+        sidePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 180, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        sidePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 180, 10));
+
+        BG.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnMostrarAl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnMostrarMat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnInscribir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAgregarMat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAgregarAl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(124, 124, 124))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(173, 173, 173))))
+            .addComponent(BG, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(btnAgregarAl)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAgregarMat)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnInscribir)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMostrarAl)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMostrarMat)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSalir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addGap(38, 38, 38))
+            .addComponent(BG, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAgregarAlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlActionPerformed
-        GuiAgregarAlumno agregarAl = new GuiAgregarAlumno();
-        agregarAl.setVisible(true);
-        agregarAl.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_btnAgregarAlActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         txtResultado.setText(" ");
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        if ((JOptionPane.showConfirmDialog(null, "Realmente "
-                + "desea salir?", "Confirmar salida",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE)) == 0) {
-            System.exit(0);
-        }
-    }//GEN-LAST:event_btnSalirActionPerformed
+    private void btn_AgregarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AgregarAlumnoMouseClicked
+        GuiAgregarAlumno agregarAl = new GuiAgregarAlumno();
+        agregarAl.setVisible(true);
+        agregarAl.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_btn_AgregarAlumnoMouseClicked
 
-    private void btnMostrarAlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarAlActionPerformed
-        String aux2 = " ";
-        for (Alumno aux : Colegio.getAlumnos()) {
-            aux2 += aux.mostrarAlumno();
-        }
-        txtResultado.setText(aux2);
-
-    }//GEN-LAST:event_btnMostrarAlActionPerformed
-
-    private void btnAgregarMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMatActionPerformed
+    private void btn_AgregarMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AgregarMateriaMouseClicked
         GUIAgregarMateria agregarMat = new GUIAgregarMateria();
         agregarMat.setVisible(true);
         agregarMat.setLocationRelativeTo(null);
         dispose();
-    }//GEN-LAST:event_btnAgregarMatActionPerformed
+    }//GEN-LAST:event_btn_AgregarMateriaMouseClicked
 
-    private void btnMostrarMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarMatActionPerformed
+    private void btn_MostrarMateriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MostrarMateriasMouseClicked
         String aux2 = " ";
         for (Materia aux : Colegio.getMaterias()) {
             aux2 += aux + "\n" + "------------------------" + "\n";
         }
         txtResultado.setText(aux2);
-    }//GEN-LAST:event_btnMostrarMatActionPerformed
+    }//GEN-LAST:event_btn_MostrarMateriasMouseClicked
 
-    private void btnInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInscribirActionPerformed
+    private void btn_MostrarAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MostrarAlumnosMouseClicked
+        String aux2 = " ";
+        for (Alumno aux : Colegio.getAlumnos()) {
+            aux2 += aux.mostrarAlumno();
+        }
+        txtResultado.setText(aux2);
+    }//GEN-LAST:event_btn_MostrarAlumnosMouseClicked
+
+    private void btn_InscribirAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InscribirAlumnoMouseClicked
         GuiInscribirAlumno inscribir = new GuiInscribirAlumno();
         inscribir.setVisible(true);
         inscribir.setLocationRelativeTo(null);
         dispose();
-    }//GEN-LAST:event_btnInscribirActionPerformed
+    }//GEN-LAST:event_btn_InscribirAlumnoMouseClicked
 
+    private void btn_AgregarAlumnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AgregarAlumnoMousePressed
+ 
+    }//GEN-LAST:event_btn_AgregarAlumnoMousePressed
+
+    private void btn_AgregarAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AgregarAlumnoMouseEntered
+        setColor(btn_AgregarAlumno);
+        resetColor(btn_AgregarMateria);
+        resetColor(btn_MostrarMaterias);
+        resetColor(btn_MostrarAlumnos);
+        resetColor(btn_InscribirAlumno);
+    }//GEN-LAST:event_btn_AgregarAlumnoMouseEntered
+
+    private void btn_AgregarMateriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AgregarMateriaMouseEntered
+        resetColor(btn_AgregarAlumno);
+        setColor(btn_AgregarMateria);
+        resetColor(btn_MostrarMaterias);
+        resetColor(btn_MostrarAlumnos);
+        resetColor(btn_InscribirAlumno);
+    }//GEN-LAST:event_btn_AgregarMateriaMouseEntered
+
+    private void btn_MostrarMateriasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MostrarMateriasMouseEntered
+        resetColor(btn_AgregarAlumno);
+        resetColor(btn_AgregarMateria);
+        setColor(btn_MostrarMaterias);
+        resetColor(btn_MostrarAlumnos);
+        resetColor(btn_InscribirAlumno);
+    }//GEN-LAST:event_btn_MostrarMateriasMouseEntered
+
+    private void btn_MostrarAlumnosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MostrarAlumnosMouseEntered
+        resetColor(btn_AgregarAlumno);
+        resetColor(btn_AgregarMateria);
+        resetColor(btn_MostrarMaterias);
+        setColor(btn_MostrarAlumnos);
+        resetColor(btn_InscribirAlumno);
+    }//GEN-LAST:event_btn_MostrarAlumnosMouseEntered
+
+    private void btn_InscribirAlumnoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InscribirAlumnoMouseEntered
+        resetColor(btn_AgregarAlumno);
+        resetColor(btn_AgregarMateria);
+        resetColor(btn_MostrarMaterias);
+        resetColor(btn_MostrarAlumnos);
+        setColor(btn_InscribirAlumno);
+    }//GEN-LAST:event_btn_InscribirAlumnoMouseEntered
+    public void setColor(JPanel panel) {
+        panel.setBackground(new Color(85, 65, 118));
+    }
+
+    public void resetColor(JPanel panel) {
+        panel.setBackground(new Color(64, 43, 100));
+    }
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarAl;
-    private javax.swing.JButton btnAgregarMat;
-    private javax.swing.JButton btnInscribir;
-    private javax.swing.JButton btnMostrarAl;
-    private javax.swing.JButton btnMostrarMat;
-    private javax.swing.JButton btnSalir;
+    private javax.swing.JPanel BG;
+    private javax.swing.JLabel JLIconMenu;
+    private javax.swing.JLabel JLIconMenu2;
+    private javax.swing.JLabel JLIconMenu3;
+    private javax.swing.JLabel JLIconMenu4;
+    private javax.swing.JLabel JLIconMenu5;
+    private javax.swing.JPanel btn_AgregarAlumno;
+    private javax.swing.JPanel btn_AgregarMateria;
+    private javax.swing.JPanel btn_InscribirAlumno;
+    private javax.swing.JPanel btn_MostrarAlumnos;
+    private javax.swing.JPanel btn_MostrarMaterias;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JLabel jLMenu;
+    private javax.swing.JLabel jLMenu2;
+    private javax.swing.JLabel jLMenu3;
+    private javax.swing.JLabel jLMenu4;
+    private javax.swing.JLabel jLMostrarMaterias;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel sidePanel;
     private javax.swing.JTextArea txtResultado;
     // End of variables declaration//GEN-END:variables
 }

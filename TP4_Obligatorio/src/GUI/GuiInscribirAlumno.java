@@ -43,94 +43,99 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
     private void initComponents() {
 
         jSpinner1 = new javax.swing.JSpinner();
-        jTitulo = new javax.swing.JLabel();
-        jLAlumno = new javax.swing.JLabel();
-        jLMateria = new javax.swing.JLabel();
-        jBoxMateria = new javax.swing.JComboBox<>();
-        jBoxAlumno = new javax.swing.JComboBox<>();
+        BG = new javax.swing.JPanel();
         jButtonVolver = new javax.swing.JButton();
         jBtnGuardar = new javax.swing.JButton();
+        jBoxAlumno = new javax.swing.JComboBox<>();
+        jBoxMateria = new javax.swing.JComboBox<>();
+        jLMateria = new javax.swing.JLabel();
+        jLAlumno = new javax.swing.JLabel();
+        sidePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setPreferredSize(new java.awt.Dimension(596, 443));
+        setResizable(false);
+        setSize(new java.awt.Dimension(596, 443));
 
-        jTitulo.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jTitulo.setText("Inscribir Alumno");
+        BG.setBackground(new java.awt.Color(255, 255, 255));
+        BG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLAlumno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLAlumno.setText("Alumno");
-
-        jLMateria.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLMateria.setText("Materia");
-
-        jBoxMateria.addActionListener(new java.awt.event.ActionListener() {
+        jButtonVolver.setBackground(new java.awt.Color(53, 44, 91));
+        jButtonVolver.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jButtonVolver.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonVolver.setText("Volver");
+        jButtonVolver.setBorder(null);
+        jButtonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBoxMateriaActionPerformed(evt);
+                jButtonVolverActionPerformed(evt);
             }
         });
+        BG.add(jButtonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 100, 30));
+
+        jBtnGuardar.setBackground(new java.awt.Color(53, 44, 91));
+        jBtnGuardar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        jBtnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnGuardar.setText("Guardar");
+        jBtnGuardar.setBorder(null);
+        jBtnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnGuardarActionPerformed(evt);
+            }
+        });
+        BG.add(jBtnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 100, 30));
 
         jBoxAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBoxAlumnoActionPerformed(evt);
             }
         });
+        BG.add(jBoxAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 200, -1));
 
-        jButtonVolver.setText("Volver");
-        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+        jBoxMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVolverActionPerformed(evt);
+                jBoxMateriaActionPerformed(evt);
             }
         });
+        BG.add(jBoxMateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 200, -1));
 
-        jBtnGuardar.setText("Guardar");
-        jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnGuardarActionPerformed(evt);
-            }
-        });
+        jLMateria.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLMateria.setForeground(new java.awt.Color(51, 51, 51));
+        jLMateria.setText("Materia");
+        BG.add(jLMateria, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
+
+        jLAlumno.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLAlumno.setForeground(new java.awt.Color(51, 51, 51));
+        jLAlumno.setText("Alumno");
+        BG.add(jLAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
+
+        sidePanel.setBackground(new java.awt.Color(53, 44, 91));
+        sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Inscribir Alumno");
+        sidePanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 200, -1));
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        sidePanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 180, 10));
+
+        BG.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 440));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLMateria)
-                    .addComponent(jLAlumno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBoxMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBoxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTitulo)
-                .addGap(171, 171, 171))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(jBtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97))
+            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jTitulo)
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLAlumno)
-                    .addComponent(jBoxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLMateria)
-                    .addComponent(jBoxMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37))
+            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
         );
 
         pack();
@@ -172,13 +177,16 @@ public class GuiInscribirAlumno extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BG;
     private javax.swing.JComboBox<Object> jBoxAlumno;
     private javax.swing.JComboBox<Object> jBoxMateria;
     private javax.swing.JButton jBtnGuardar;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JLabel jLAlumno;
     private javax.swing.JLabel jLMateria;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JLabel jTitulo;
+    private javax.swing.JPanel sidePanel;
     // End of variables declaration//GEN-END:variables
 }
