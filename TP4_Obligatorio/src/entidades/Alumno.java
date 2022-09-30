@@ -71,8 +71,16 @@ public class Alumno {
     public String mostrarAlumno() {
         return nombre + " " + apellido + "\n"
                 + "Legajo: " + legajo + "\n"
-                + materias + "\n"
+                + "Materias: "+ "\n" + mats()
                 + "_____________" + "\n";
+    }
+    
+    public String mats(){
+        String mat = "";
+        for (Materia materia : materias) {
+           mat += "- " + materia;
+        }
+        return mat;
     }
 
     @Override
