@@ -65,7 +65,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
         jtxtId.setBackground(new java.awt.Color(255, 255, 255));
-        jtxtId.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtId.setForeground(new java.awt.Color(102, 102, 102));
         jtxtId.setText("Ingrese el ID de la materia");
         jtxtId.setBorder(null);
         jtxtId.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -94,7 +94,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
 
         jtxtNombre.setBackground(new java.awt.Color(255, 255, 255));
-        jtxtNombre.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtNombre.setForeground(new java.awt.Color(102, 102, 102));
         jtxtNombre.setText("Ingrese el nombre de la Materia");
         jtxtNombre.setBorder(null);
         jtxtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,7 +115,7 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLanio, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
         jtxtAnio.setBackground(new java.awt.Color(255, 255, 255));
-        jtxtAnio.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtAnio.setForeground(new java.awt.Color(102, 102, 102));
         jtxtAnio.setText("Ingrese el año al que pertenece la Materia");
         jtxtAnio.setToolTipText("");
         jtxtAnio.setBorder(null);
