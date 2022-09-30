@@ -5,6 +5,7 @@
 package GUI;
 
 import entidades.Alumno;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import tp4_obligatorio.Colegio;
 
@@ -64,7 +65,7 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(jlLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
         txtLegajo.setBackground(new java.awt.Color(255, 255, 255));
-        txtLegajo.setForeground(new java.awt.Color(102, 102, 102));
+        txtLegajo.setForeground(new java.awt.Color(204, 204, 204));
         txtLegajo.setText("Ingrese el número de Legajo");
         txtLegajo.setBorder(null);
         txtLegajo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,7 +89,7 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(txtLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 310, 30));
 
         txtNombre.setBackground(new java.awt.Color(255, 255, 255));
-        txtNombre.setForeground(new java.awt.Color(102, 102, 102));
+        txtNombre.setForeground(new java.awt.Color(204, 204, 204));
         txtNombre.setText("Ingrese su nombre");
         txtNombre.setBorder(null);
         txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -109,7 +110,7 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
 
         txtApellido.setBackground(new java.awt.Color(255, 255, 255));
-        txtApellido.setForeground(new java.awt.Color(102, 102, 102));
+        txtApellido.setForeground(new java.awt.Color(204, 204, 204));
         txtApellido.setText("Ingrese su apellido");
         txtApellido.setBorder(null);
         txtApellido.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -267,14 +268,17 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
 
     private void txtLegajoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtLegajoMousePressed
         txtLegajo.setText("");
+        txtLegajo.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_txtLegajoMousePressed
 
     private void txtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMousePressed
         txtNombre.setText("");
+        txtNombre.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_txtNombreMousePressed
 
     private void txtApellidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoMousePressed
         txtApellido.setText("");
+        txtApellido.setForeground(Color.DARK_GRAY);
     }//GEN-LAST:event_txtApellidoMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
