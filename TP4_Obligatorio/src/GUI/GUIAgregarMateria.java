@@ -65,7 +65,14 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
         jtxtId.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtId.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtId.setText("Ingrese el ID de la materia");
         jtxtId.setBorder(null);
+        jtxtId.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jtxtIdMousePressed(evt);
+            }
+        });
         jtxtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtIdActionPerformed(evt);
@@ -87,7 +94,14 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
 
         jtxtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtNombre.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtNombre.setText("Ingrese el nombre de la Materia");
         jtxtNombre.setBorder(null);
+        jtxtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jtxtNombreMousePressed(evt);
+            }
+        });
         jtxtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtxtNombreKeyReleased(evt);
@@ -101,7 +115,15 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
         jPanel1.add(jLanio, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
         jtxtAnio.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtAnio.setForeground(new java.awt.Color(204, 204, 204));
+        jtxtAnio.setText("Ingrese el año al que pertenece la Materia");
+        jtxtAnio.setToolTipText("");
         jtxtAnio.setBorder(null);
+        jtxtAnio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jtxtAnioMousePressed(evt);
+            }
+        });
         jtxtAnio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtAnioActionPerformed(evt);
@@ -276,6 +298,18 @@ public class GUIAgregarMateria extends javax.swing.JFrame {
     private void jtxtAnioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtAnioKeyReleased
        habilitarBoton();
     }//GEN-LAST:event_jtxtAnioKeyReleased
+
+    private void jtxtIdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxtIdMousePressed
+        jtxtId.setText("");
+    }//GEN-LAST:event_jtxtIdMousePressed
+
+    private void jtxtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxtNombreMousePressed
+        jtxtNombre.setText("");
+    }//GEN-LAST:event_jtxtNombreMousePressed
+
+    private void jtxtAnioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxtAnioMousePressed
+        jtxtAnio.setText("");
+    }//GEN-LAST:event_jtxtAnioMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

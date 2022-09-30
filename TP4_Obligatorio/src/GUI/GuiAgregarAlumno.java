@@ -64,7 +64,14 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(jlLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
         txtLegajo.setBackground(new java.awt.Color(255, 255, 255));
+        txtLegajo.setForeground(new java.awt.Color(204, 204, 204));
+        txtLegajo.setText("Ingrese el número de Legajo");
         txtLegajo.setBorder(null);
+        txtLegajo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtLegajoMousePressed(evt);
+            }
+        });
         txtLegajo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLegajoActionPerformed(evt);
@@ -81,7 +88,14 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(txtLegajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 310, 30));
 
         txtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombre.setForeground(new java.awt.Color(204, 204, 204));
+        txtNombre.setText("Ingrese su nombre");
         txtNombre.setBorder(null);
+        txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtNombreMousePressed(evt);
+            }
+        });
         txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNombreKeyReleased(evt);
@@ -95,7 +109,14 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
         jPanel1.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
 
         txtApellido.setBackground(new java.awt.Color(255, 255, 255));
+        txtApellido.setForeground(new java.awt.Color(204, 204, 204));
+        txtApellido.setText("Ingrese su apellido");
         txtApellido.setBorder(null);
+        txtApellido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtApellidoMousePressed(evt);
+            }
+        });
         txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtApellidoKeyReleased(evt);
@@ -243,6 +264,18 @@ public class GuiAgregarAlumno extends javax.swing.JFrame {
     private void txtApellidoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyReleased
         habilitarBoton();
     }//GEN-LAST:event_txtApellidoKeyReleased
+
+    private void txtLegajoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtLegajoMousePressed
+        txtLegajo.setText("");
+    }//GEN-LAST:event_txtLegajoMousePressed
+
+    private void txtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMousePressed
+        txtNombre.setText("");
+    }//GEN-LAST:event_txtNombreMousePressed
+
+    private void txtApellidoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoMousePressed
+        txtApellido.setText("");
+    }//GEN-LAST:event_txtApellidoMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
